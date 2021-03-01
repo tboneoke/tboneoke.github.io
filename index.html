@@ -1,28 +1,19 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset='utf8'>
-    </head>
-<h1>Evil Elves 2 (Hopefully)
-</h1>
+	<style>
+    .center{
+    text-align:left;
+    }
+    </style>
+		<head>
+			<h1 class="center">Evil Elves 2</h1>
+			<p class="center">Right click to go fullscreen with Ruffle.</p>
+		</head>
 <body>
-        <div id='ruffle'></div>
-        <script src='https://e9x.github.io/ruffle/ruffle.js'></script>
-        <script>
-var swfobject = {};
-
-swfobject.embedSWF = function(url, cont, width, height){
-    var ruffle = window.RufflePlayer.newest(),
-        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
-            width: width,
-            height: height,
-            style: 'width: ' + width + 'px; height: ' + height + 'px',
-        });
-    
-    player.load({ url: url });
-}
-
-swfobject.embedSWF('https://tboneoke.github.io/evilelves2.swf', 'ruffle', 600, 412);
-        </script>
-    </body>
+	<div style="height:625px; width:1080px; overflow:hidden">
+		<iframe src="https://web.archive.org/web/20081211122617/http://funschool.kaboose.com/fun-blaster/christmas/games/game_evil_elves2.html" name="iframe_a" height="625" width=94%" frameborder="no" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" style="position:relative; left:-240px;">
+		</iframe>
+    </div>
+</body>
 </html>
+
