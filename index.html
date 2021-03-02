@@ -1,23 +1,80 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <script type="text/javascript">
+     function newSrc() {
+      var e = document.getElementById("selectframe");
+      var newSrc = e.options[e.selectedIndex].value;
+      document.getElementById("game").src=newSrc;
+     }
+
+	function changeSelect() {
+    if (document.getElementById("selectframe").value == "https://www.coolstreaming.us/forum/arcade/game/2061.html") {
+        document.getElementById("divText").innerHTML = "Move the vampire with the 'WASD' keys.";
+    } else if (document.getElementById("selectframe").value == "https://web.archive.org/web/20081211122617/http://funschool.kaboose.com/fun-blaster/christmas/games/game_evil_elves2.html") {
+        document.getElementById("divText").innerHTML = "Move Santa with the arrow keys. Throw snowballs with the spacebar.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/33379-dig-dug-rev-2.html") {
+        document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Shoot your pump with the 'S' key, and move with the arrow keys.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/8580-galaxian-namco-set-1.html") {
+        document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Shoot with the 'S' key, and move with the arrow keys.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/8573-galaga-namco.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Shoot with the 'S' key, and move with the arrow keys.";
+    } else if (document.getElementById("selectframe").value == "https://archive.org/details/arcade_polepos") {
+    	document.getElementById("divText").innerHTML = "Pressing the '9' key starts the game. 'Space' toggles between gears. Steer with the arrow keys.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/33849-mappy-us.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Pressing the 'S key opens doors.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/9406-pac-man-midway-1.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/19305-xevious-alternate.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Shoot with the 'X' key, and drop bombs with the 'Z' key.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/33262-centipede-revision-3.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, and 'Enter' to start. Shoot with the 'S' key.";
+    } else if (document.getElementById("selectframe").value == "https://www.retrogames.cc/embed/33901-millipede.html") {
+    	document.getElementById("divText").innerHTML = "Press 'Shift' to insert a coin, then 'Enter', then 'S' to start. Shoot with the 'S' key.";
+    } else if (document.getElementById("selectframe").value == "https://static.arcadespot.com/retroemulator.php?system=gba&game=2018/03/Elf-Bowling-1-2-.zip") {
+    	document.getElementById("divText").innerHTML = "Press enter a few times to start the game. Bowl with 'X'.";
+    }
+}
+
+    	</script>
+        	<style type="text/css">
+     	    select {clear:both;}
+    	</style>
 	</head>
 	<style>
-    .center{
-    text-align:left;
-    }
+    	.center{
+   		 text-align:left;
+   		 }
+    
     </style>
 		<header>
-			<h1 class="center">Funschool Flash Games</h1>
-			<p class="center">Click on one of the links below to open Evil Elves 2 or Transylmania in the frame.Right click to go fullscreen with Ruffle.</p>
+			<h1 class="center">My Nostalgic Game Collection</h1>
+			<p class="center">Select a game from the dropdown menu, and click the play button to open it in the frame. Since Adobe Flash is dead, the flash games will not work unless you download and install the Ruffle plugin.</p>
+            <a href="https://ruffle.rs/">Ruffle website</a>
+            <p class="center">Right click on the game to go fullscreen with Ruffle.</p>
 		</header>
 <body>
 	<div style="height:625px; width:1080px; overflow:hidden">
-		<iframe style="background-color:gray;" name="iframe_a" height="625" width=94%" frameborder="no" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true">
-		</iframe>
-    </div>
-    <p><a href="https://web.archive.org/web/20081211122617/http://funschool.kaboose.com/fun-blaster/christmas/games/game_evil_elves2.html" target="iframe_a">Evil Elves 2</a></p>
-	<p><a href="https://www.coolstreaming.us/forum/arcade/game/2061.html" target="iframe_a">Transylmania</a><p/>
+		<iframe sandbox="allow-forms allow-scripts allow-same-origin" style="background-color:gray;" id="game" height="625" width="94%" frameborder="no" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true"></iframe></div>
+        
+        <select id="selectframe" onchange="changeSelect()">
+        <option value="1">No game chosen</option>
+        <option value="https://web.archive.org/web/20081211122617/http://funschool.kaboose.com/fun-blaster/christmas/games/game_evil_elves2.html">Evil Elves 2</option>
+     	<option value="https://www.coolstreaming.us/forum/arcade/game/2061.html">Transylmania</option>
+        <option value="https://www.retrogames.cc/embed/33379-dig-dug-rev-2.html">Dig Dug</option>
+        <option value="https://www.retrogames.cc/embed/8580-galaxian-namco-set-1.html">Galaxian</option>
+        <option value="https://www.retrogames.cc/embed/8573-galaga-namco.html">Galaga</option>
+        <option value="https://archive.org/details/arcade_polepos">Pole Position</option>
+        <option value="https://www.retrogames.cc/embed/33849-mappy-us.html">Mappy</option>
+        <option value="https://www.retrogames.cc/embed/9406-pac-man-midway-1.html">Pac-Man</option>
+        <option value="https://www.retrogames.cc/embed/19305-xevious-alternate.html">Xevious</option>
+        <option value="https://www.retrogames.cc/embed/33262-centipede-revision-3.html">Centipede</option>
+        <option value="https://www.retrogames.cc/embed/33901-millipede.html">Millipede</option>
+        <option value="https://static.arcadespot.com/retroemulator.php?system=gba&game=2018/03/Elf-Bowling-1-2-.zip">Elf Bowling 1 and 2</option>
+    	</select>
+ 
+    <button onClick="newSrc();">Play Game</button>
+    <h2>Game Controls</h2>
+    <p id="divText">Select a game.</p>
 </body>
 </html>
-
